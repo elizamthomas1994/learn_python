@@ -22,8 +22,8 @@
 # Example:
 #   Call:    first_element([1, 2, 3])
 #   Returns: 1
-
-
+def first_element(arr):
+  return arr[0]
 
 # Method name: second_element
 # Purpose: returns the second element of the given list
@@ -31,8 +31,8 @@
 # Example:
 #   Call:    second_element([1, 2, 3])
 #   Returns: 2
-
-
+def second_element(arr):
+  return arr[1]
 
 # Method name: last_element
 # Purpose: returns the last element of the given list
@@ -40,8 +40,8 @@
 # Example:
 #   Call:    last_element([1, 2, 3])
 #   Returns: 3
-
-
+def last_element(arr):
+  return arr[-1]
 
 # Method name: first_two_elements
 # Purpose: returns the first two elements of the given list
@@ -49,8 +49,8 @@
 # Example:
 #   Call:    first_two_elements([1, 2, 3])
 #   Returns: [1, 2]
-
-
+def first_two_elements(arr):
+  return arr[:2]
 
 # Method name: first_three_elements
 # Purpose: returns the first three elements of the given list
@@ -58,8 +58,8 @@
 # Example:
 #   Call:    first_three_elements([1, 2, 3, 4])
 #   Returns: [1, 2, 3]
-
-
+def first_three_elements(arr):
+  return arr[:3]
 
 # Method name: total
 # Purpose: returns the sum of all the elements in the given list
@@ -67,8 +67,8 @@
 # Example:
 #   Call:    total([1, 2, 3])
 #   Returns: 6
-
-
+def total(arr):
+  return sum(arr)
 
 # Method name: lowest_number
 # Purpose: returns the lowest number in the given list
@@ -76,8 +76,9 @@
 # Example:
 #   Call:    lowest_number([4, 2, 6])
 #   Returns: 2
-
-
+def lowest_number(arr):
+  arr.sort()
+  return arr[0]
 
 # Method name: highest_number
 # Purpose: returns the highest number in the given list
@@ -85,8 +86,9 @@
 # Example:
 #   Call:    highest_number([4, 6, 2])
 #   Returns: 6
-
-
+def highest_number(arr):
+  arr.sort()
+  return arr[-1]
 
 # Method name: the_beatles
 # Purpose: returns the list ['john', 'paul', 'george', 'ringo']
@@ -94,8 +96,8 @@
 # Example:
 #   Call:    the_beatles()
 #   Returns: ['john', 'paul', 'george', 'ringo']
-
-
+def the_beatles():
+  return ['john', 'paul', 'george', 'ringo']
 
 # Method name: i_joined_the_beatles
 # Purpose: adds the given name to the list ['john', 'paul', 'george', 'ringo']
@@ -103,8 +105,10 @@
 # Example:
 #   Call:    i_joined_the_beatles('yoko')
 #   Returns: ['john', 'paul', 'george', 'ringo', 'yoko']
-
-
+def i_joined_the_beatles(name):
+  the_beatles = ['john', 'paul', 'george', 'ringo']
+  the_beatles.append(name)
+  return the_beatles
 
 # Method name: we_joined_the_beatles
 # Purpose: adds the given names to the list ['john', 'paul', 'george', 'ringo']
@@ -112,8 +116,10 @@
 # Example:
 #   Call:    we_joined_the_beatles(['yoko', 'stuart'])
 #   Returns: ['john', 'paul', 'george', 'ringo', 'yoko', 'stuart']
-
-
+def we_joined_the_beatles(arr):
+  the_beatles = ['john', 'paul', 'george', 'ringo']
+  the_beatles.extend(arr)
+  return the_beatles
 
 # Method name: remove_nones_from_list
 # Purpose: removes all the None values from the given list
@@ -121,8 +127,12 @@
 # Example:
 #   Call:    remove_nones_from_list([1, None, 2, None, 3])
 #   Returns: [1, 2, 3]
+def remove_nones_from_list(arr):
+  count = arr.count(None)
+  for i in range(count):
+    arr.remove(None)
 
-
+  return arr
 
 # Method name: double_list
 # Purpose: returns a list with all the elements of the given list repeated twice
@@ -130,8 +140,9 @@
 # Example:
 #   Call:    double_list([1, 2, 3])
 #   Returns: [1, 2, 3, 1, 2, 3]
-
-
+def double_list(arr):
+  arr.extend(arr)
+  return arr
 
 # Method name: unique_elements
 # Purpose: returns a list with all the unique elements of the given list
@@ -139,8 +150,10 @@
 # Example:
 #   Call:    unique_elements([1, 2, 1, 3, 2, 3])
 #   Returns: [1, 2, 3]
-
-
+def unique_elements(arr):
+  set_res = set(arr)
+  list_res = (list(set_res))
+  return list_res
 
 # Method name: add_to_list
 # Purpose: adds the given element to the given list
@@ -148,8 +161,9 @@
 # Example:
 #   Call:    add_to_list(["a", "b", "c"], "d")
 #   Returns: ["a", "b", "c", "d"]
-
-
+def add_to_list(arr, el):
+  arr.insert(len(arr), el)
+  return arr
 
 # == DICTIONARY EXERCISES ==
 
