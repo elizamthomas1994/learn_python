@@ -174,8 +174,10 @@ def add_to_list(arr, el):
 # Example:
 #   Call:    new_band_member({"bass": "flea"})
 #   Returns: {"vocalist": "miss piggy", "lead_guitar": "scooter", "bass": "flea"}
-
-
+def new_band_member(dict):
+  band_members = {"vocalist": "miss piggy", "lead_guitar": "scooter"}
+  band_members.update(dict)
+  return band_members
 
 # Method name: all_values
 # Purpose: returns a list of all the values in the given dictionary
@@ -183,8 +185,8 @@ def add_to_list(arr, el):
 # Example:
 #   Call:    all_values({"a": 1, "b": 2, "c": 3})
 #   Returns: [1, 2, 3]
-
-
+def all_values(dict):
+  return dict.values()
 
 # Method name: all_keys
 # Purpose: returns a list of all the keys in the given dictionary
@@ -192,8 +194,8 @@ def add_to_list(arr, el):
 # Example:
 #   Call:    all_keys({"a": 1, "b": 2, "c": 3})
 #   Returns: ["a", "b", "c"]
-
-
+def all_keys(dict):
+  return dict.keys()
 
 # Method name: remove_nones_from_dictionary
 # Purpose: removes all pairs from a given dictionary where the value is None
@@ -201,9 +203,9 @@ def add_to_list(arr, el):
 # Example:
 #   Call:    remove_nones_from_dictionary({"a": 1, "b": None, "c": 3})
 #   Returns: {"a": 1, "c": 3}
-
-
-
+def remove_nones_from_dictionary(dict):
+  dict = {key:val for key, val in dict.items() if val != None}
+  return dict
 
 # Method name: touch_in
 # Purpose: creates a dictionary from a given tube station and time
@@ -211,4 +213,5 @@ def add_to_list(arr, el):
 # Example:
 #   Call:    touch_in('Aldgate East', '2022/01/30 17:12')
 #   Returns: {'entrypoint': 'Aldgate East', 'time': '2022/01/30 17:12'}
-
+def touch_in(str1, str2):
+  return {'entrypoint': str1, 'time': str2}
