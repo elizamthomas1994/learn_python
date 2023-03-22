@@ -83,8 +83,12 @@ class Vehicle():
 #   > cat = Cat()
 #   > cat.speak()
 #   'miaow'
-
-
+class Cat():
+  def __init__(self):
+    return None
+  
+  def speak(self):
+    return "miaow"
 
 # Class name: Dog
 # Purpose: woofs at the user
