@@ -109,7 +109,6 @@ class Dog():
   def speak(self):
     return "woof"
 
-
 # Class name: StringFormatter
 # Purpose: transforms strings
 # Methods:
@@ -127,7 +126,15 @@ class Dog():
 #   'HELLO'
 #   > string_formatter.lower_case('HELLO')
 #   'hello'
-
+class StringFormatter():
+  def __init__(self):
+    return None
+  
+  def block_caps(self, string):
+    return string.upper()
+  
+  def lower_case(self, string):
+    return string.lower()
 
 
 # Class name: Calculator
