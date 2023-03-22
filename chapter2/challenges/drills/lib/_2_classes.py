@@ -67,8 +67,9 @@ class Animal():
 #   > vehicle = Vehicle()
 #   > vehicle
 #   <Vehicle object at 0x7f8b8c0b8e80>
-
-
+class Vehicle():
+  def __init__(self):
+    return None
 
 # Class name: Cat
 # Purpose: miaows at the user
