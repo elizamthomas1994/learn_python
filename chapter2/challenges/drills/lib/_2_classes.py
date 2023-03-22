@@ -30,14 +30,14 @@ import datetime
 # Example solution follows.
 
 class Greeter():
-    def __init__(self, name):
-        self.name = name
+  def __init__(self, name):
+    self.name = name
 
-    def hello(self):
-        return 'hello, ' + self.name
+  def hello(self):
+    return 'hello, ' + self.name
 
-    def goodbye(self):
-        return 'goodbye, ' + self.name
+  def goodbye(self):
+    return 'goodbye, ' + self.name
 
 
 # == EXERCISES ==
@@ -52,7 +52,9 @@ class Greeter():
 #   > animal = Animal()
 #   > animal
 #   <Animal object at 0x7f8b8c0b8e80>
-
+class Animal():
+  def __init__(self):
+    return None
 
 
 # Class name: Vehicle

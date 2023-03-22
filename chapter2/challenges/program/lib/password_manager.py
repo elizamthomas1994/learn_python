@@ -45,4 +45,4 @@
 # == YOUR CODE ==
 
 class PasswordManager():
-    pass
+  pass
