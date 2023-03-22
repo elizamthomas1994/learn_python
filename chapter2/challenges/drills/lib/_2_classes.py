@@ -102,7 +102,12 @@ class Cat():
 #   > dog = Dog()
 #   > dog.speak()
 #   'woof'
-
+class Dog():
+  def __init__(self):
+    return None
+  
+  def speak(self):
+    return "woof"
 
 
 # Class name: StringFormatter
