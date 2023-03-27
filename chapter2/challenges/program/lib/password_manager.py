@@ -45,4 +45,18 @@
 # == YOUR CODE ==
 
 class PasswordManager():
-  pass
+  def __init__(self):
+    self.password_list = {}
+  
+  def add(self, service_name, password):
+    chars_to_check = ["!", "@", "$", "%", "&"]
+    for char in chars_to_check:
+      if char in password and len(password) >= 8:
+        self.password_list.update({service_name: password})
+
+  
+  def get_for_service(self, service_name):
+    return self.password_list[service_name]
+  
+  def list_services(self):
+    return self.password_list.keys()
