@@ -20,8 +20,8 @@
 # Example:
 #   Call:    fourth_element([1, 2, 3, 4, 5])
 #   Returns: 4
-def fourth_element(dict):
-  return dict[3]
+def fourth_element(list):
+  return list[3]
 
 # Method name: average
 # Purpose: returns the average (the mean) of the given list
@@ -43,8 +43,10 @@ def average(list):
 # Example:
 #   Call:    lowest_squared([5, 3, 44, 7])
 #   Returns: 9
-
-
+def lowest_squared(list):
+  list.sort()
+  num = list[0]
+  return num ** 2
 
 # Method name: highest_squared
 # Purpose: returns the highest number squared
@@ -52,8 +54,10 @@ def average(list):
 # Example:
 #   Call:    highest_squared([5, 3, 44, 7])
 #   Returns: 1936
-
-
+def highest_squared(list):
+  list.sort()
+  num = list[-1]
+  return num ** 2
 
 # Method name: starts_with_a
 # Purpose: returns only elements starting with 'a'
