@@ -65,8 +65,16 @@ def highest_squared(list):
 # Example:
 #   Call:    starts_with_a(['banana', 'apple', 'orange', 'avocado'])
 #   Returns: ['apple', 'avocado']
+def starts_with_a(list):
+  filtered_list = []
 
+  for i in list:
+    if i.startswith('a'):
+      filtered_list.append(i)
+    else:
+      None
 
+  return filtered_list
 
 # Method name: starts_with_a_vowel
 # Purpose: returns only the elements that start with a vowel
@@ -74,8 +82,16 @@ def highest_squared(list):
 # Example:
 #   Call:    starts_with_a_vowel(['banana', 'apple', 'orange', 'avocado'])
 #   Returns: ['apple', 'orange', 'avocado']
+def starts_with_a_vowel(list):
+  filtered_list = []
 
+  for i in list:
+    if i.startswith('a') or i.startswith('e') or i.startswith('i') or i.startswith('o') or i.startswith('u'):
+      filtered_list.append(i)
+    else:
+      None
 
+  return filtered_list
 
 # Method name: reverse_each_element
 # Purpose: reverses each sting in the given list
