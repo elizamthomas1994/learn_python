@@ -56,7 +56,10 @@ class PasswordManager():
 
   
   def get_for_service(self, service_name):
-    return self.password_list[service_name]
+    if service_name in self.password_list:
+      return self.password_list[service_name]
+    else:
+      return None
   
   def list_services(self):
     return self.password_list.keys()
