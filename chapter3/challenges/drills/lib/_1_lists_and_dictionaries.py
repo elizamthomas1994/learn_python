@@ -20,8 +20,8 @@
 # Example:
 #   Call:    fourth_element([1, 2, 3, 4, 5])
 #   Returns: 4
-
-
+def fourth_element(dict):
+  return dict[3]
 
 # Method name: average
 # Purpose: returns the average (the mean) of the given list
@@ -29,8 +29,13 @@
 # Example:
 #   Call:    average([3, 1, 44, 1])
 #   Returns: 12.25
+def average(list):
+  sum = 0 
 
+  for i in list:
+    sum += i
 
+  return (sum / len(list))
 
 # Method name: lowest_squared
 # Purpose: returns the lowest number squared
