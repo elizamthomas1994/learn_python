@@ -245,7 +245,7 @@ def remove_key_value_pair(dict, key):
 #   Call:    where_value_below({'cat': 4, 'person': 2, 'centipede': 100}, 5)
 #   Returns: {'cat': 4, 'person': 2}
 def where_value_below(dict, num):
-  pass
+  return {key: value for key, value in dict.items() if value < num}
 
 # Method name: where_key_starts_with
 # Purpose: returns key value pairs where the key starts with the letter provided
@@ -254,5 +254,5 @@ def where_value_below(dict, num):
 #   Call:    where_key_starts_with({'cat': 4, 'person': 2, 'centipede': 100}, 'c')
 #   Returns: {'cat': 4, 'centipede': 100}
 def where_key_starts_with(dict, letter):
-  pass
+  return {key: value for key, value in dict.items() if key.startswith(letter)}
 
