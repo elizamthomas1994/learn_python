@@ -99,8 +99,13 @@ def starts_with_a_vowel(list):
 # Example:
 #   Call:    reverse_each_element(['one', 'two'])
 #   Returns: ['eno', 'owt']
+def reverse_each_element(list):
+  filtered_list = []
 
+  for i in list:
+    filtered_list.append(i[::-1])
 
+  return filtered_list
 
 # Method name: sort_by_last_letter
 # Purpose: returns the list, sorted by the last letter alphabetically
@@ -108,8 +113,8 @@ def starts_with_a_vowel(list):
 # Example:
 #   Call:    sort_by_last_letter(['banana', 'apple', 'carrot', 'avocado'])
 #   Returns: ['banana', 'apple', 'avocado', 'carrot']
-
-
+def sort_by_last_letter(list):
+  return sorted(list, key=lambda x: x[-1])
 
 # Method name: greater_than_5
 # Purpose: returns only numbers greater than 5
@@ -117,8 +122,14 @@ def starts_with_a_vowel(list):
 # Example:
 #   Call:    greater_than_5([9, 3, 44, 7])
 #   Returns: [9, 44, 7]
+def greater_than_5(list):
+  filtered_list = []
 
+  for i in list:
+    if i > 5:
+      filtered_list.append(i)
 
+  return filtered_list
 
 # Method name: greater_than
 # Purpose: returns only the elements that are greater than the number provided
@@ -126,8 +137,14 @@ def starts_with_a_vowel(list):
 # Example:
 #   Call:    greater_than([9, 3, 6, 44, 7, 7], 6)
 #   Returns: [9, 44, 7, 7]
+def greater_than(list, num):
+  filtered_list = []
 
+  for i in list:
+    if i > num:
+      filtered_list.append(i)
 
+  return filtered_list
 
 # Method name: less_than
 # Purpose: returns only the elements that are less than the number provided
@@ -135,8 +152,14 @@ def starts_with_a_vowel(list):
 # Example:
 #   Call:    less_than([9, 3, 6, 44, 1, 7, 7], 6)
 #   Returns: [3, 1]
+def less_than(list, num):
+  filtered_list = []
 
+  for i in list:
+    if i < num:
+      filtered_list.append(i)
 
+  return filtered_list
 
 # Method name: words_shorter_than
 # Purpose: returns only the elements than have fewer characters than the number provided
@@ -144,8 +167,8 @@ def starts_with_a_vowel(list):
 # Example:
 #   Call:    words_shorter_than(['banana', 'apple', 'orange', 'nut', 'avocado'], 6)
 #   Returns: ['apple', 'nut']
-
-
+def words_shorter_than(list, num):
+  return [i for i in list if len(i) < num]
 
 # Method name: all_above
 # Purpose: returns true if all elements are greater than the number provided
@@ -155,8 +178,8 @@ def starts_with_a_vowel(list):
 #   Returns: False
 #   Call:    all_above([9, 3, 6, 44, 1, 7, 7], 0)
 #   Returns: True
-
-
+def all_above(list, num):
+  return all(i > num for i in list)
 
 # Method name: all_below
 # Purpose: returns true if all elements are less than the number provided
@@ -166,8 +189,8 @@ def starts_with_a_vowel(list):
 #   Returns: False
 #   Call:    all_below([9, 3, 6, 44, 1, 7, 7], 100)
 #   Returns: True
-
-
+def all_below(list, num):
+  return all(i < num for i in list)
 
 # Method name: multiply_each_by
 # Purpose: returns a new list with each element multiplied by the number provided
@@ -175,7 +198,12 @@ def starts_with_a_vowel(list):
 # Example:
 #   Call:    multiply_each_by([9, 3, 6, 44, 1, 7, 7], 2)
 #   Returns: [18, 6, 12, 88, 2, 14, 14]
+def multiply_each_by(list, num):
+  filtered_list = []
+  for i in list:
+    filtered_list.append(i * num)
 
+  return filtered_list
 
 
 # == DICTIONARY EXERCISES ==
@@ -186,8 +214,9 @@ def starts_with_a_vowel(list):
 # Example:
 #   Call:    values_summed({'cat': 4, 'person': 2, 'centipede': 100})
 #   Returns: 106
-
-
+def values_summed(dict):
+  values = dict.values()
+  return sum(values)
 
 # Method name: add_key_value_pair
 # Purpose: returns a the dictionary with the new key and value added
