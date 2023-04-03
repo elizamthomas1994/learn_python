@@ -224,8 +224,9 @@ def values_summed(dict):
 # Example:
 #   Call:    add_key_value_pair({'cat': 4, 'person': 2, 'centipede': 100}, 'dog', 4)
 #   Returns: {'cat': 4, 'person': 2, 'centipede': 100, 'dog': 4}
-
-
+def add_key_value_pair(dict, key, value):
+  dict[key] = value
+  return dict
 
 # Method name: remove_key_value_pair
 # Purpose: returns a the dictionary with the key and value removed
@@ -233,8 +234,9 @@ def values_summed(dict):
 # Example:
 #   Call:    remove_key_value_pair({'cat': 4, 'person': 2, 'centipede': 100}, 'cat')
 #   Returns: {'person': 2, 'centipede': 100}
-
-
+def remove_key_value_pair(dict, key):
+  del dict[key]
+  return dict
 
 # Method name: where_value_below
 # Purpose: returns key value pairs where the value is less than the number provided
@@ -242,8 +244,8 @@ def values_summed(dict):
 # Example:
 #   Call:    where_value_below({'cat': 4, 'person': 2, 'centipede': 100}, 5)
 #   Returns: {'cat': 4, 'person': 2}
-
-
+def where_value_below(dict, num):
+  pass
 
 # Method name: where_key_starts_with
 # Purpose: returns key value pairs where the key starts with the letter provided
@@ -251,5 +253,6 @@ def values_summed(dict):
 # Example:
 #   Call:    where_key_starts_with({'cat': 4, 'person': 2, 'centipede': 100}, 'c')
 #   Returns: {'cat': 4, 'centipede': 100}
-
+def where_key_starts_with(dict, letter):
+  pass
 
