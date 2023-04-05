@@ -135,7 +135,32 @@ class Basket():
 #   0.875
 #   > calculator.list_history()
 #   [3, 12, -1, 0.875]
+class Calculator():
+  def __init__(self):
+    self.results = []
 
+  def add(self, num1, num2):
+    result = num1 + num2
+    self.results.append(result)
+    return result
+
+  def multiply(self, num1, num2):
+    result = num1 * num2
+    self.results.append(result)
+    return result
+  
+  def subtract(self, num1, num2):
+    result = num1 - num2
+    self.results.append(result)
+    return result
+  
+  def divide(self, num1, num2):
+    result = num1 / num2
+    self.results.append(result)
+    return result
+  
+  def list_history(self):
+    return self.results
 
 
 # Class name: Cohort
