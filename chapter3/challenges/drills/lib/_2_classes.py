@@ -186,7 +186,19 @@ class Calculator():
 #   [{'name' : 'Jo', 'employer' : 'NASA'}, {'name' : 'Alex', 'employer' : 'NASA'}, {'name' : 'Bobby', 'employer' : 'Google'}]
 #   > cohort.list_employed_by('NASA')
 #   [{'name' : 'Jo', 'employer' : 'NASA'}, {'name' : 'Alex', 'employer' : 'NASA'}]
+class Cohort():
+  def __init__(self):
+    self.cohort = []
 
+  def add_student(self, student):
+    self.cohort.append(student)
+
+  def list_students(self):
+    return self.cohort
+  
+  def list_employed_by(self, employer):
+    filtered_list = filter(lambda item: item['employer'] == employer, self.cohort)
+    return list(filtered_list)
 
 
 # Class name: Person
