@@ -58,8 +58,21 @@
 #   'Good night, Bobby!'
 #   > greeter.good_morning('Bobby')
 #   'Good morning, Bobby!'
+class Greeter():
+  def __init__(self):
+    return None
 
+  def hello(self, name):
+    return 'Hello, ' + name + '!'
 
+  def goodbye(self, name):
+    return 'Goodbye, ' + name + '!'
+  
+  def good_night(self, name):
+    return 'Good night, ' + name + '!'
+  
+  def good_morning(self, name):
+    return 'Good morning, ' + name + '!'
 
 # Class name: Basket
 # Purpose: store a list of items
