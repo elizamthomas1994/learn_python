@@ -92,7 +92,15 @@ class Greeter():
 #   > basket.add('orange')
 #   > basket.list_items()
 #   ['apple', 'banana', 'orange']
+class Basket():
+  def __init__(self):
+    self.basket = []
 
+  def add(self, item):
+    self.basket.append(item)
+
+  def list_items(self):
+    return self.basket
 
 
 # Class name: Calculator
